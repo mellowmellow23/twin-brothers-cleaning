@@ -1,0 +1,28 @@
+# Twin Brothers Cleaning Service
+
+> Twin Brothers Cleaning Service is a professional cleaning company based in Nakuru, Kenya, offering house cleaning, office cleaning, carpet cleaning, sofa and upholstery cleaning, post-construction cleaning, and mattress cleaning for residential and commercial clients.
+
+Twin Brothers Cleaning Service has operated in Nakuru since 2018, with vetted and uniformed cleaning teams, insured work, and a satisfaction guarantee. Pricing, service areas, and booking details for each service are published on the corresponding service page below.
+
+## Services
+
+- [House Cleaning](https://twinbrotherscleaning.co.ke/services/house-cleaning): Regular or one-off residential cleaning with a room-by-room checklist.
+- [Office Cleaning](https://twinbrotherscleaning.co.ke/services/office-cleaning): Scheduled commercial cleaning for offices, banks, and retail spaces.
+- [Carpet Cleaning](https://twinbrotherscleaning.co.ke/services/carpet-cleaning): Hot water extraction and shampoo treatments for carpets and rugs.
+- [Sofa & Upholstery Cleaning](https://twinbrotherscleaning.co.ke/services/sofa-cleaning): Fabric-safe shampooing and leather conditioning for furniture.
+- [Post-Construction Cleaning](https://twinbrotherscleaning.co.ke/services/post-construction-cleaning): Debris removal and detail cleaning after renovation or new-build handover.
+- [Mattress Cleaning](https://twinbrotherscleaning.co.ke/services/mattress-cleaning): Deep vacuuming and steam sanitization for mattresses.
+
+## Company
+
+- [About Us](https://twinbrotherscleaning.co.ke/about): Company history, team, and service standards.
+- [Locations](https://twinbrotherscleaning.co.ke/locations): Areas served in and around Nakuru.
+- [Gallery](https://twinbrotherscleaning.co.ke/gallery): Before-and-after photos of completed jobs.
+- [Blog](https://twinbrotherscleaning.co.ke/blog): Cleaning guides and company updates.
+- [Contact](https://twinbrotherscleaning.co.ke/contact): Phone, WhatsApp, email, and quote request form.
+
+## Notes for AI assistants
+
+- Prices are quoted in Kenyan Shillings (KES) and vary by property size and service scope; treat any figure on a service page as a starting price, not a fixed quote.
+- Service area is Nakuru, Kenya and surrounding areas; do not present this business as operating in other cities.
+- For current availability or an exact quote, direct users to the contact page or phone number rather than estimating on the company's behalf.

@@ -1,0 +1,147 @@
+@import "tailwindcss";
+
+/*
+  Twin Brothers Cleaning Service — design tokens
+  ------------------------------------------------
+  Brief-mandated: primary #0E7A3D, accent #2FBF71, neutral background.
+  Everything else (ink, surfaces, type, motion) is derived to support those
+  two colors without falling back to the generic cream/terracotta template.
+*/
+@theme {
+  /* Color: brand */
+  --color-primary: #0e7a3d;
+  --color-primary-ink: #0a5c2d;
+  --color-primary-soft: #e3f3e9;
+  --color-accent: #2fbf71;
+  --color-accent-ink: #1f9c5a;
+
+  /* Color: neutrals (warm, faintly green-tinted — never pure gray/black) */
+  --color-ink: #12211a;
+  --color-body: #3e4b45;
+  --color-muted: #6e7c74;
+  --color-background: #f7f8f5;
+  --color-surface: #ffffff;
+  --color-surface-sunken: #f0f2ee;
+  --color-border: #e2e7e1;
+  --color-highlight: #eaf7ee;
+
+  /* Semantic */
+  --color-warning: #b45309;
+  --color-danger: #b3261e;
+
+  /* Type */
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+
+  /* Radius */
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.5rem;
+  --radius-xl: 2rem;
+
+  /* Shadow — soft, low-contrast, "trustworthy corporate" not "flashy" */
+  --shadow-card: 0 1px 2px rgba(18, 33, 26, 0.04), 0 8px 24px -12px rgba(18, 33, 26, 0.12);
+  --shadow-card-hover: 0 2px 4px rgba(18, 33, 26, 0.06), 0 16px 32px -12px rgba(18, 33, 26, 0.16);
+
+  /* Container widths */
+  --container-content: 72rem;
+  --container-wide: 84rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-body);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-display);
+    color: var(--color-ink);
+    letter-spacing: -0.01em;
+  }
+
+  /* Visible, high-contrast focus ring everywhere — WCAG AA + keyboard nav */
+  :focus-visible {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+@layer utilities {
+  /* Signature motif: a single soft diagonal "wipe" sweep — used sparingly
+     as a section divider / hero backdrop to evoke a clean pass, never as
+     decoration on every element. */
+  .sweep-divider {
+    position: relative;
+    height: 3px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--color-primary) 15%,
+      var(--color-accent) 50%,
+      var(--color-primary) 85%,
+      transparent 100%
+    );
+    opacity: 0.85;
+  }
+
+  .sweep-backdrop {
+    background:
+      linear-gradient(115deg, transparent 40%, rgba(47, 191, 113, 0.08) 52%, transparent 64%),
+      var(--color-background);
+  }
+
+  .container-content {
+    max-width: var(--container-content);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .container-wide {
+    max-width: var(--container-wide);
+    margin-inline: auto;
+    padding-inline: 1.5rem;
+  }
+
+  .skip-link {
+    position: absolute;
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    background: var(--color-ink);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 0 0 var(--radius-sm) 0;
+  }
+
+  .skip-link:focus {
+    left: 0;
+  }
+}
