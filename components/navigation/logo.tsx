@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { cn } from "@/lib/utils/cn";
 
 export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
@@ -10,13 +11,18 @@ export function Logo({ variant = "dark" }: { variant?: "dark" | "light" }) {
     >
       <span
         className={cn(
-          "flex size-9 items-center justify-center rounded-[var(--radius-sm)] font-[family-name:var(--font-display)] text-lg font-semibold",
-          variant === "dark"
-            ? "bg-[var(--color-primary)] text-white"
-            : "bg-white/10 text-white"
+          "relative flex size-9 shrink-0 items-center justify-center rounded-[var(--radius-sm)]",
+          variant === "light" && "bg-white/10"
         )}
       >
-        TB
+        <Image
+          src="/images/brand/logo-icon.png"
+          alt=""
+          width={36}
+          height={36}
+          priority
+          className="size-8 object-contain"
+        />
       </span>
       <span
         className={cn(
