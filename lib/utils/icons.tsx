@@ -21,6 +21,11 @@ import {
   Droplets,
   Wind,
   Building,
+  Bug,
+  AlertCircle,
+  SprayCan,
+  Wrench,
+
   type LucideProps,
 } from "lucide-react";
 import type { LucideIconName } from "@/types";
@@ -48,6 +53,10 @@ const registry: Record<LucideIconName, React.ComponentType<LucideProps>> = {
   Droplets,
   Wind,
   Building,
+  Bug,
+  AlertCircle,
+  SprayCan,
+  
 };
 
 export function Icon({

@@ -171,7 +171,3 @@ export type LucideIconName =
   | "Bug"
   | "AlertCircle"
   | "SprayCan"
-  | "Broom"
-  | "VacuumCleaner"
-  | "Mop"
-  | "Wrench";
