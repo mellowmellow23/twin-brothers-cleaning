@@ -1,29 +1,30 @@
 @import "tailwindcss";
 
+
 /*
   Twin Brothers Cleaning Service — design tokens
   ------------------------------------------------
-  Brief-mandated: primary #0E7A3D, accent #2FBF71, neutral background.
+  Brand: primary #006AFF (from logo), with a lighter sky-blue accent.
   Everything else (ink, surfaces, type, motion) is derived to support those
   two colors without falling back to the generic cream/terracotta template.
 */
-@theme {
+:root {
   /* Color: brand */
-  --color-primary: #0e7a3d;
-  --color-primary-ink: #0a5c2d;
-  --color-primary-soft: #e3f3e9;
-  --color-accent: #2fbf71;
-  --color-accent-ink: #1f9c5a;
+  --color-primary: #006aff;
+  --color-primary-ink: #0050c7;
+  --color-primary-soft: #e6f0ff;
+  --color-accent: #38bdf8;
+  --color-accent-ink: #0ea5e9;
 
-  /* Color: neutrals (warm, faintly green-tinted — never pure gray/black) */
-  --color-ink: #12211a;
-  --color-body: #3e4b45;
-  --color-muted: #6e7c74;
-  --color-background: #f7f8f5;
+  /* Color: neutrals (cool, faintly blue-tinted — never pure gray/black) */
+  --color-ink: #0f1b2d;
+  --color-body: #33415c;
+  --color-muted: #64748b;
+  --color-background: #f6f8fb;
   --color-surface: #ffffff;
-  --color-surface-sunken: #f0f2ee;
-  --color-border: #e2e7e1;
-  --color-highlight: #eaf7ee;
+  --color-surface-sunken: #eef2f8;
+  --color-border: #e1e7ef;
+  --color-highlight: #eaf2ff;
 
   /* Semantic */
   --color-warning: #b45309;

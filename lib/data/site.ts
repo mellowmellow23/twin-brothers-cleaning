@@ -9,7 +9,7 @@ export const siteConfig = {
   url: "https://www.twinbrotherscleaning.co.ke",
   legalName: "Twin Brothers Cleaning & Pest Control Services",
   locale: "en-KE",
-  themeColor: "#0E7A3D",
+  themeColor: "#006AFF",
 } as const;
 
 export const contactChannels: ContactChannel[] = [
