@@ -2,12 +2,15 @@ import type { ServiceDetail } from "@/types";
 import { services } from "./services";
 import { cleaningProcess } from "./content";
 
-type DetailExtras = Omit<
-  ServiceDetail,
-  keyof (typeof services)[number] | "process"
-> & {
+interface DetailExtras {
+  heroImage: string;
+  benefits: ServiceDetail["benefits"];
+  included: string[];
+  notIncluded?: string[];
+  faqs: ServiceDetail["faqs"];
+  relatedServiceSlugs: string[];
   process?: ServiceDetail["process"];
-};
+}
 
 const detailExtras: Record<string, DetailExtras> = {
   "house-cleaning": {
@@ -66,8 +69,13 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes. Tell us your preferred day and frequency and we'll reserve the same crew for every visit where possible.",
       },
+      {
+        question: "Do you offer house cleaning across Nakuru Town?",
+        answer:
+          "Yes — house cleaning is available across Nakuru Town and the surrounding neighbourhoods we serve. Check our locations page if you're unsure your area is covered.",
+      },
     ],
-    relatedServiceSlugs: ["office-cleaning", "carpet-cleaning", "sofa-cleaning"],
+    relatedServiceSlugs: ["office-cleaning", "carpet-cleaning", "pest-control"],
   },
 
   "office-cleaning": {
@@ -122,6 +130,11 @@ const detailExtras: Record<string, DetailExtras> = {
         question: "Is a supervisor assigned to larger contracts?",
         answer:
           "For multi-day or larger commercial contracts, a lead cleaner coordinates the crew and is your point of contact.",
+      },
+      {
+        question: "Do you cover offices outside Nakuru Town centre?",
+        answer:
+          "Yes — we take on office cleaning contracts across Nakuru Town and the wider Nakuru area, subject to a quick coverage check for further-out sites.",
       },
     ],
     relatedServiceSlugs: ["carpet-cleaning", "post-construction-cleaning", "house-cleaning"],
@@ -180,6 +193,11 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Most stains lift significantly with hot water extraction and spot treatment, though very old or dye-based stains may only partially fade.",
       },
+      {
+        question: "Do you offer carpet cleaning throughout Nakuru?",
+        answer:
+          "Yes — carpet cleaning is available for homes and offices across Nakuru, using the same hot water extraction equipment for every job.",
+      },
     ],
     relatedServiceSlugs: ["sofa-cleaning", "mattress-cleaning", "house-cleaning"],
   },
@@ -235,6 +253,11 @@ const detailExtras: Record<string, DetailExtras> = {
         question: "How soon can we sit on the furniture again?",
         answer:
           "Most fabric upholstery is dry within 4–8 hours; we'll confirm timing on-site based on the fabric and method used.",
+      },
+      {
+        question: "Do you cover sofa cleaning across Nakuru?",
+        answer:
+          "Yes — sofa and upholstery cleaning is available for homes, offices, and Airbnb properties across Nakuru and Nakuru Town.",
       },
     ],
     relatedServiceSlugs: ["carpet-cleaning", "mattress-cleaning", "house-cleaning"],
@@ -293,8 +316,13 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes, we regularly coordinate handover timing directly with contractors, site managers, or property developers.",
       },
+      {
+        question: "Do you handle post-construction cleaning outside Nakuru Town?",
+        answer:
+          "Yes — we cover new developments and renovations across Nakuru, not just the town centre. Confirm your site location and we'll advise on timing.",
+      },
     ],
-    relatedServiceSlugs: ["office-cleaning", "carpet-cleaning", "house-cleaning"],
+    relatedServiceSlugs: ["office-cleaning", "pest-control", "house-cleaning"],
   },
 
   "mattress-cleaning": {
@@ -348,8 +376,104 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Pricing is per item, so a single mattress, double, or king-size are each quoted individually based on size.",
       },
+      {
+        question: "Is mattress cleaning available across Nakuru?",
+        answer:
+          "Yes — mattress cleaning is available for homes, hostels, and short-stay properties across Nakuru and Nakuru Town.",
+      },
     ],
     relatedServiceSlugs: ["sofa-cleaning", "carpet-cleaning", "house-cleaning"],
+  },
+
+  "pest-control": {
+    heroImage: "/images/team/team-shopfront-2.jpeg",
+    benefits: [
+      {
+        icon: "AlertCircle",
+        title: "Covers the common Nakuru pests",
+        description:
+          "Bed bugs, cockroaches, termites, ants, and rodents — treated with the right method for each, not one generic spray.",
+      },
+      {
+        icon: "ShieldCheck",
+        title: "Eco-friendly, family-safe products",
+        description:
+          "Approved, low-toxicity insecticides that are effective on pests while safe around children, pets, and food areas once dry.",
+      },
+      {
+        icon: "SprayCan",
+        title: "Free follow-up for bed bugs",
+        description:
+          "Bed bug treatments include a second visit roughly two weeks later to catch newly hatched eggs the first round couldn't reach.",
+      },
+      {
+        icon: "Timer",
+        title: "Fast response",
+        description:
+          "Most fumigation jobs in Nakuru Town and surrounding areas are scheduled within 24–48 hours of your call.",
+      },
+    ],
+    included: [
+      "Pre-treatment inspection to identify pest type and entry points",
+      "Fumigation or targeted treatment of affected rooms",
+      "Advice on preparation (clearing surfaces, food storage) before treatment",
+      "Safe-to-return guidance once treatment has dried/settled",
+      "Follow-up visit for bed bug treatments (approx. 2 weeks later)",
+      "Basic prevention advice to reduce reinfestation",
+    ],
+    notIncluded: [
+      "Structural pest damage repair (e.g. termite-damaged timber)",
+      "Wildlife/large animal removal",
+    ],
+    faqs: [
+      {
+        question: "Do you offer fumigation and pest control in Nakuru Town?",
+        answer:
+          "Yes — pest control and fumigation is available across Nakuru Town and the surrounding areas we serve, for both homes and businesses.",
+      },
+      {
+        question: "Is the fumigation safe for children and pets?",
+        answer:
+          "We use approved, eco-friendly products and will advise on how long to keep children and pets out of treated rooms until it's fully safe.",
+      },
+      {
+        question: "How many visits does bed bug treatment take?",
+        answer:
+          "Typically two: an initial treatment to kill active bed bugs, then a follow-up about two weeks later to treat any eggs that have since hatched.",
+      },
+      {
+        question: "Do I need to move out during treatment?",
+        answer:
+          "Usually not — most treatments only require a few hours away from the treated rooms while the product settles, not a full day or overnight stay.",
+      },
+    ],
+    process: [
+      {
+        step: 1,
+        title: "Get in touch",
+        description:
+          "Call, WhatsApp, or fill in the contact form describing the pest problem and the space involved.",
+      },
+      {
+        step: 2,
+        title: "Inspection & quote",
+        description:
+          "We identify the pest and entry points on-site or by description, then confirm scope and price before treatment.",
+      },
+      {
+        step: 3,
+        title: "Treatment",
+        description:
+          "Our team fumigates or treats the affected areas using the right method for that pest.",
+      },
+      {
+        step: 4,
+        title: "Follow-up",
+        description:
+          "For bed bugs, a second visit around two weeks later catches anything that's since hatched.",
+      },
+    ],
+    relatedServiceSlugs: ["house-cleaning", "office-cleaning", "post-construction-cleaning"],
   },
 };
 

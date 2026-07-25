@@ -167,4 +167,11 @@ export type LucideIconName =
   | "Timer"
   | "Droplets"
   | "Wind"
-  | "Building";
+  | "Building"
+  | "Bug"
+  | "AlertCircle"
+  | "SprayCan"
+  | "Broom"
+  | "VacuumCleaner"
+  | "Mop"
+  | "Wrench";
