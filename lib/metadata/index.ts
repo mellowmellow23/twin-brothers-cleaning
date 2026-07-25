@@ -29,7 +29,7 @@ export function createMetadata({
   const fullTitle = path === "/" ? title : `${title} | ${siteConfig.name}`;
 
   return {
-    title: fullTitle,
+    title: { absolute: fullTitle },
     description,
     keywords,
     alternates: {

@@ -6,7 +6,7 @@ export const siteConfig = {
   tagline: "Nakuru's trusted cleaning partner for homes and businesses",
   description:
     "Twin Brothers Cleaning Service delivers professional house cleaning, office cleaning, carpet, sofa, mattress and post-construction cleaning across Nakuru, Kenya — vetted teams and a satisfaction guarantee on every job.",
-  url: "https://twinbrotherscleaning.co.ke",
+  url: "https://www.twinbrotherscleaning.co.ke",
   legalName: "Twin Brothers Cleaning & Pest Control Services",
   locale: "en-KE",
   themeColor: "#0E7A3D",
