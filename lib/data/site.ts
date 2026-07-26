@@ -12,6 +12,23 @@ export const siteConfig = {
   themeColor: "#006AFF",
 } as const;
 
+/**
+ * Real Google Business Profile, matched via Places lookup on 2026-07-24.
+ * Listing name there is "Twin Brothers Cleaning Services" (plural) — the
+ * site uses "Twin Brothers Cleaning Service" (singular). Minor NAP
+ * inconsistency worth aligning on one or the other with the owner.
+ */
+export const googleBusinessProfile = {
+  placeId: "ChIJ7b9RjCCNKRgRtvZcWEpWrdE",
+  mapsUrl: "https://www.google.com/maps/place/?q=place_id:ChIJ7b9RjCCNKRgRtvZcWEpWrdE",
+  reviewUrl: "https://search.google.com/local/writereview?placeid=ChIJ7b9RjCCNKRgRtvZcWEpWrdE",
+  embedUrl: "https://www.google.com/maps?q=place_id:ChIJ7b9RjCCNKRgRtvZcWEpWrdE&output=embed",
+  rating: 4.5,
+  ratingCount: 11,
+  latitude: -0.289991,
+  longitude: 36.0694234,
+} as const;
+
 export const contactChannels: ContactChannel[] = [
   {
     type: "phone",
@@ -35,13 +52,15 @@ export const contactChannels: ContactChannel[] = [
     type: "address",
     label: "Office",
     value: "Moses Mudavadi Road, Nakuru, Kenya",
-    href: "https://maps.google.com/?q=Moses+Mudavadi+Road+Nakuru+Kenya",
+    href: googleBusinessProfile.mapsUrl,
   },
 ];
 
-// Confirmed via business listing: Mon–Sat 7am–6pm, closed Sunday.
+// Verified against the live Google Business Profile listing on 2026-07-24
+// (previously showed Mon–Sat 7am–6pm here, which no longer matched Google).
 export const businessHours: BusinessHours[] = [
-  { day: "Monday – Saturday", hours: "7:00 AM – 6:00 PM" },
+  { day: "Monday – Friday", hours: "8:00 AM – 6:00 PM" },
+  { day: "Saturday", hours: "8:00 AM – 5:00 PM" },
   { day: "Sunday", hours: "Closed" },
 ];
 

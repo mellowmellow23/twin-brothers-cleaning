@@ -1,4 +1,4 @@
-import { siteConfig, contactChannels, businessHours } from "@/lib/data/site";
+import { siteConfig, contactChannels, businessHours, googleBusinessProfile } from "@/lib/data/site";
 
 const phone = contactChannels.find((c) => c.type === "phone")?.value;
 const address = contactChannels.find((c) => c.type === "address")?.value;
@@ -11,11 +11,12 @@ export function organizationSchema() {
     name: siteConfig.legalName,
     alternateName: siteConfig.name,
     url: siteConfig.url,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}/images/brand/logo-wordmark.png`,
     telephone: phone,
     sameAs: [
       "https://facebook.com/twinbrotherscleaning",
       "https://instagram.com/twinbrotherscleaning",
+      googleBusinessProfile.mapsUrl,
     ],
   };
 }
@@ -56,14 +57,22 @@ export function localBusinessSchema() {
     },
     geo: {
       "@type": "GeoCoordinates",
-      latitude: -0.3031,
-      longitude: 36.08,
+      latitude: googleBusinessProfile.latitude,
+      longitude: googleBusinessProfile.longitude,
     },
     areaServed: {
       "@type": "City",
       name: "Nakuru",
     },
     openingHoursSpecification: openingHours,
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: googleBusinessProfile.rating,
+      reviewCount: googleBusinessProfile.ratingCount,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    sameAs: [googleBusinessProfile.mapsUrl],
     parentOrganization: { "@id": `${siteConfig.url}/#organization` },
   };
 }

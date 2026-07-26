@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { PhoneCall, MessageCircle, MapPin, Clock } from "lucide-react";
+import { PhoneCall, MessageCircle, MapPin, Clock, Star } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Button } from "@/components/ui/button";
 import { JsonLd } from "@/components/seo/json-ld";
-import { contactChannels, businessHours } from "@/lib/data/site";
+import { contactChannels, businessHours, googleBusinessProfile } from "@/lib/data/site";
 import { createMetadata } from "@/lib/metadata";
 import { pageGraphSchema, webPageSchema, breadcrumbSchema } from "@/lib/schema";
 
@@ -70,7 +70,7 @@ export default function ContactPage() {
               <MapPin className="mt-0.5 size-5 shrink-0 text-[var(--color-primary)]" aria-hidden="true" />
               <div>
                 <p className="text-sm font-semibold text-[var(--color-ink)]">Office</p>
-                <a
+                  <a
                   href={address?.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -96,10 +96,33 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Google Maps placeholder — swap for an embedded map once you
-              share the exact map link/place ID */}
-          <div className="flex aspect-video w-full items-center justify-center rounded-[var(--radius-md)] border border-dashed border-[var(--color-border)] bg-[var(--color-surface-sunken)] text-center text-sm text-[var(--color-muted)]">
-            Map of {address?.value} — send the Google Maps link and we'll embed it here.
+          {/* Real embedded map, using the verified Google Business Profile listing */}
+          <div className="overflow-hidden rounded-[var(--radius-md)] border border-[var(--color-border)]">
+            <iframe
+              src={googleBusinessProfile.embedUrl}
+              title="Twin Brothers Cleaning Service on Google Maps"
+              className="aspect-video w-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+          <div className="flex flex-col gap-3 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-center gap-2 text-sm text-[var(--color-body)]">
+              <Star className="size-4 fill-[var(--color-primary)] text-[var(--color-primary)]" aria-hidden="true" />
+              <span>
+                <strong className="text-[var(--color-ink)]">{googleBusinessProfile.rating}</strong> on Google ·{" "}
+                {googleBusinessProfile.ratingCount} reviews
+              </span>
+            </div>
+              <a
+              href={googleBusinessProfile.reviewUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-[var(--color-primary)] hover:underline"
+            >
+              Leave us a review on Google →
+            </a>
           </div>
         </div>
 

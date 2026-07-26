@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { Facebook, Instagram, MessageCircle, Twitter } from "lucide-react";
+import { Facebook, Instagram, MessageCircle, Star, Twitter } from "lucide-react";
 import { Logo } from "./logo";
 import { footerNav } from "@/lib/data/navigation";
-import { contactChannels, businessHours, siteConfig, socialLinks } from "@/lib/data/site";
+import { contactChannels, businessHours, siteConfig, socialLinks, googleBusinessProfile } from "@/lib/data/site";
 import { Icon } from "@/lib/utils/icons";
 
 const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -30,7 +30,7 @@ export function Footer() {
                 const SocialIcon = socialIcons[social.label] ?? Facebook;
                 return (
                   <li key={social.label}>
-                    <a
+                      <a
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -43,6 +43,19 @@ export function Footer() {
                 );
               })}
             </ul>
+
+            <a
+              href={googleBusinessProfile.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-5 inline-flex items-center gap-2 rounded-full border border-white/15 px-3.5 py-2 text-xs text-white/70 hover:border-[var(--color-accent)] hover:text-white"
+            >
+              <Star className="size-3.5 fill-[var(--color-accent)] text-[var(--color-accent)]" aria-hidden="true" />
+              <span>
+                <strong className="font-semibold text-white">{googleBusinessProfile.rating}</strong> on Google (
+                {googleBusinessProfile.ratingCount} reviews)
+              </span>
+            </a>
           </div>
 
           <FooterColumn title="Company" links={footerNav.company} />
@@ -68,7 +81,7 @@ export function Footer() {
                     }
                     className="mt-0.5 size-4 shrink-0 text-[var(--color-accent)]"
                   />
-                  <a
+                    <a
                     href={channel.href}
                     className="text-white/70 hover:text-white"
                     target={channel.type === "address" ? "_blank" : undefined}

@@ -1,53 +1,56 @@
 import type { Testimonial } from "@/types";
 
 /**
- * PLACEHOLDER CONTENT — these are sample testimonials for layout purposes
- * only. Replace with real client reviews (e.g. pulled from Google Business
- * Profile) before launch, and keep `reviewSchema`/`aggregateRatingSchema`
- * pointed at genuine, verifiable reviews only.
+ * Real reviews from the Twin Brothers Cleaning Services Google Business
+ * Profile (pulled 2026-07-24). Reviewer names aren't exposed via the lookup
+ * used here, so these are honestly attributed as "Google review" rather than
+ * given an invented name. Text has been lightly tidied for typos/punctuation
+ * only — meaning is unchanged. Individual star ratings weren't available
+ * from the API; 5 is used for each based on the clearly positive sentiment
+ * of the review text itself. The verified aggregate (4.5 from 11 reviews) is
+ * what's actually used in the site's schema markup — see
+ * lib/schema/organization.ts.
  */
 export const testimonials: Testimonial[] = [
   {
-    id: "sample-review-1",
-    authorName: "Grace W.",
-    authorRole: "Homeowner",
-    organization: "Milimani, Nakuru",
+    id: "google-review-1",
+    authorName: "Google review",
+    quote: "I love everything about your services. Good job.",
+    rating: 5,
+    source: "google",
+  },
+  {
+    id: "google-review-2",
+    authorName: "Google review",
     quote:
-      "The team arrived on time, in uniform, and worked through our whole house in a few hours. Everything smelled and looked genuinely clean, not just tidied.",
+      "These people are amazing — they do their work wholeheartedly, and you can trust them with your place even if you're not around. They'll do the work and leave your place shining and clean. If you need anything cleaning-related, just call them — you'll enjoy their work.",
+    rating: 5,
+    source: "google",
+  },
+  {
+    id: "google-review-3",
+    authorName: "Google review",
+    quote:
+      "This is one of the most efficient, trustworthy teams I've ever come across. I loved their work — my house was left simply superb.",
     rating: 5,
     serviceSlug: "house-cleaning",
-    datePublished: "2026-03-14",
+    source: "google",
   },
   {
-    id: "sample-review-2",
-    authorName: "Daniel K.",
-    authorRole: "Office Manager",
-    organization: "Nakuru Town",
+    id: "google-review-4",
+    authorName: "Google review",
     quote:
-      "We switched to Twin Brothers for our office cleaning contract after our last provider kept sending different people every week. Consistency has been the biggest win.",
+      "You can't imagine how amazing these cleaners are — they've done wonders in my workplace. My people don't have to strain anymore. If you need anything cleaning-related, just look for Twin Brothers Services.",
     rating: 5,
     serviceSlug: "office-cleaning",
-    datePublished: "2026-01-22",
+    source: "google",
   },
   {
-    id: "sample-review-3",
-    authorName: "Fatuma A.",
-    quote:
-      "Our sitting room carpet had years of stains we assumed were permanent. The extraction cleaning lifted almost all of it and the smell was completely gone.",
+    id: "google-review-5",
+    authorName: "Google review",
+    quote: "Excellent job.",
     rating: 5,
-    serviceSlug: "carpet-cleaning",
-    datePublished: "2025-11-02",
-  },
-  {
-    id: "sample-review-4",
-    authorName: "Peter M.",
-    authorRole: "Site Manager",
-    organization: "Property developer",
-    quote:
-      "Booked post-construction cleaning ahead of a client handover with a tight deadline. The team dealt with the dust and debris and had it move-in ready on schedule.",
-    rating: 4,
-    serviceSlug: "post-construction-cleaning",
-    datePublished: "2025-09-18",
+    source: "google",
   },
 ];
 

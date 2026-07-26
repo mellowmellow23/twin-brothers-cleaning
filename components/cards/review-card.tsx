@@ -26,9 +26,11 @@ export function ReviewCard({ testimonial }: { testimonial: Testimonial }) {
         <p className="text-xs text-[var(--color-muted)]">
           {[testimonial.authorRole, testimonial.organization].filter(Boolean).join(", ")}
           {testimonial.authorRole || testimonial.organization ? " · " : ""}
-          <time dateTime={testimonial.datePublished}>
-            {formatDate(testimonial.datePublished)}
-          </time>
+          {testimonial.datePublished ? (
+            <time dateTime={testimonial.datePublished}>{formatDate(testimonial.datePublished)}</time>
+          ) : testimonial.source === "google" ? (
+            <span>Verified Google review</span>
+          ) : null}
         </p>
       </figcaption>
     </figure>

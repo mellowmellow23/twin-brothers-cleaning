@@ -77,7 +77,8 @@ export interface Testimonial {
   quote: string;
   rating: 1 | 2 | 3 | 4 | 5;
   serviceSlug?: string;
-  datePublished: string;
+  datePublished?: string;
+  source?: "google" | "direct";
 }
 
 export interface Metric {
