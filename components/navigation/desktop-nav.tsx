@@ -14,12 +14,17 @@ export function DesktopNav({ items }: { items: NavGroup[] }) {
         {items.map((group) =>
           group.items && group.items.length > 0 ? (
             <NavigationMenu.Item key={group.label}>
-              <NavigationMenu.Trigger className="group flex items-center gap-1 rounded-[var(--radius-sm)] px-3.5 py-2 text-sm font-medium text-[var(--color-ink)] hover:bg-[var(--color-surface-sunken)] data-[state=open]:bg-[var(--color-surface-sunken)]">
-                {group.label}
-                <ChevronDown
-                  className="size-4 text-[var(--color-muted)] transition-transform duration-200 group-data-[state=open]:rotate-180"
-                  aria-hidden="true"
-                />
+              <NavigationMenu.Trigger asChild>
+                <Link
+                  href={group.href ?? "/services"}
+                  className="group flex items-center gap-1 rounded-[var(--radius-sm)] px-3.5 py-2 text-sm font-medium text-[var(--color-ink)] hover:bg-[var(--color-surface-sunken)] data-[state=open]:bg-[var(--color-surface-sunken)]"
+                >
+                  {group.label}
+                  <ChevronDown
+                    className="size-4 text-[var(--color-muted)] transition-transform duration-200 group-data-[state=open]:rotate-180"
+                    aria-hidden="true"
+                  />
+                </Link>
               </NavigationMenu.Trigger>
               <NavigationMenu.Content className="absolute left-0 top-full w-full data-[motion=from-start]:animate-in data-[motion=from-start]:fade-in">
                 <ul className="grid w-[560px] grid-cols-2 gap-1 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-3 shadow-[var(--shadow-card-hover)]">

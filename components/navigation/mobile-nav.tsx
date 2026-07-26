@@ -66,6 +66,17 @@ export function MobileNav({ items }: { items: NavGroup[] }) {
                       </button>
                       {expanded === group.label ? (
                         <ul className="mb-3 flex flex-col gap-1 pl-3">
+                          {group.href ? (
+                            <li>
+                              <Link
+                                href={group.href}
+                                onClick={() => setOpen(false)}
+                                className="block rounded-[var(--radius-sm)] px-2 py-2 text-sm font-semibold text-[var(--color-primary)] hover:bg-[var(--color-surface-sunken)]"
+                              >
+                                View all {group.label.toLowerCase()}
+                              </Link>
+                            </li>
+                          ) : null}
                           {group.items.map((item) => (
                             <li key={item.href}>
                               <Link

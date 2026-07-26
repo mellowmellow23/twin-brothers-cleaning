@@ -70,7 +70,7 @@ export default function ContactPage() {
               <MapPin className="mt-0.5 size-5 shrink-0 text-[var(--color-primary)]" aria-hidden="true" />
               <div>
                 <p className="text-sm font-semibold text-[var(--color-ink)]">Office</p>
-                  <a
+                <a
                   href={address?.href}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -115,7 +115,7 @@ export default function ContactPage() {
                 {googleBusinessProfile.ratingCount} reviews
               </span>
             </div>
-              <a
+            <a
               href={googleBusinessProfile.reviewUrl}
               target="_blank"
               rel="noopener noreferrer"

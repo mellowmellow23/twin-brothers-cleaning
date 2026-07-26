@@ -30,7 +30,7 @@ export function Footer() {
                 const SocialIcon = socialIcons[social.label] ?? Facebook;
                 return (
                   <li key={social.label}>
-                      <a
+                    <a
                       href={social.href}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -81,7 +81,7 @@ export function Footer() {
                     }
                     className="mt-0.5 size-4 shrink-0 text-[var(--color-accent)]"
                   />
-                    <a
+                  <a
                     href={channel.href}
                     className="text-white/70 hover:text-white"
                     target={channel.type === "address" ? "_blank" : undefined}
