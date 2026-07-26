@@ -3,10 +3,12 @@ import path from "path";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
+  // Pins the workspace root to this project explicitly, so Turbopack stops
+  // guessing based on unrelated lockfiles it finds in parent directories
+  // (e.g. a package-lock.json sitting in the user's home directory).
   turbopack: {
-    root: path.join(__dirname),
+    root: path.resolve(__dirname),
   },
-
   images: {
     formats: ["image/avif", "image/webp"],
     remotePatterns: [
@@ -23,3 +25,4 @@ const nextConfig: NextConfig = {
   // typedRoutes: true,
 };
 
+export default nextConfig;
