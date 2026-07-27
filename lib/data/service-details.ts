@@ -4,6 +4,8 @@ import { cleaningProcess } from "./content";
 
 interface DetailExtras {
   heroImage: string;
+  openingHook: string;
+  pricingNote: string;
   benefits: ServiceDetail["benefits"];
   included: string[];
   notIncluded?: string[];
@@ -15,6 +17,10 @@ interface DetailExtras {
 const detailExtras: Record<string, DetailExtras> = {
   "house-cleaning": {
     heroImage: "/images/team/team-shopfront-2.jpeg",
+    openingHook:
+      "Dust builds up faster than you'd like to admit, the bathroom never quite looks 'done', and finding a full day to deep clean the whole house rarely happens. A trained two-person team can do in a few hours what takes a busy household a full weekend.",
+    pricingNote:
+      "Pricing depends on the number of bedrooms/bathrooms and whether it's a first-time deep clean or a recurring visit. Most 2–3 bedroom homes start from KES 2,500 per visit — we confirm an exact price before any work begins, with no surprise add-ons.",
     benefits: [
       {
         icon: "Sparkles",
@@ -74,12 +80,21 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes — house cleaning is available across Nakuru Town and the surrounding neighbourhoods we serve. Check our locations page if you're unsure your area is covered.",
       },
+      {
+        question: "What's the difference between a standard clean and a deep clean?",
+        answer:
+          "A standard clean covers the checklist above on a home that's already reasonably maintained. A deep clean adds extra time for buildup in grout, inside appliances, skirting boards, and areas that don't get touched weekly — usually the right choice for a first visit.",
+      },
     ],
     relatedServiceSlugs: ["office-cleaning", "carpet-cleaning", "pest-control"],
   },
 
   "office-cleaning": {
     heroImage: "/images/team/team-shopfront-1.jpeg",
+    openingHook:
+      "A reception area that looks tired, a washroom that gets complaints, or a cleaning contractor who sends someone different every week — none of it looks good in front of clients or staff. A fixed crew on a fixed schedule fixes all three.",
+    pricingNote:
+      "Office cleaning is quoted per contract based on floor area, frequency, and scope (daily/weekly/monthly). As a guide, contracts start from around KES 15,000 per visit for a small office — we'll walk the space (or take details over the phone) and confirm an exact price before signing anything.",
     benefits: [
       {
         icon: "Building2",
@@ -136,12 +151,21 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes — we take on office cleaning contracts across Nakuru Town and the wider Nakuru area, subject to a quick coverage check for further-out sites.",
       },
+      {
+        question: "Can you start with a trial period before signing a full contract?",
+        answer:
+          "Yes — many clients start with a single trial clean or a one-month rolling contract before committing to a longer term, so you can judge consistency for yourself.",
+      },
     ],
     relatedServiceSlugs: ["carpet-cleaning", "post-construction-cleaning", "house-cleaning"],
   },
 
   "carpet-cleaning": {
     heroImage: "/images/gallery/chair-upholstery-cleaning.jpeg",
+    openingHook:
+      "Old coffee stains, a musty smell after the rains, or carpets that just look flat and grey no matter how often they're vacuumed — regular vacuuming only ever lifts surface dust. The dirt and odor sitting deep in the fibres needs actual extraction.",
+    pricingNote:
+      "Carpet cleaning is priced per square foot so you're only paying for the area actually cleaned, from KES 350 per sqft. A typical living room or bedroom carpet is quoted upfront once we know the room dimensions — no flat 'per room' guessing.",
     benefits: [
       {
         icon: "Droplets",
@@ -198,12 +222,21 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes — carpet cleaning is available for homes and offices across Nakuru, using the same hot water extraction equipment for every job.",
       },
+      {
+        question: "Will the carpet shrink or get damaged from the water?",
+        answer:
+          "No — our extraction machines control water volume and suction precisely, which is what separates professional extraction from a DIY carpet shampooer. Fibre type is checked beforehand so the method and product match the carpet.",
+      },
     ],
     relatedServiceSlugs: ["sofa-cleaning", "mattress-cleaning", "house-cleaning"],
   },
 
   "sofa-cleaning": {
     heroImage: "/images/gallery/sofa-cleaning-outdoor.jpeg",
+    openingHook:
+      "Your sofa can end up looking years older than it is — flattened cushions, a faint smell that never quite airs out, stains from spills or pets that regular vacuuming can't touch. A proper extraction clean brings both the look and the smell back to new.",
+    pricingNote:
+      "Sofa and upholstery cleaning is priced per item, from KES 1,200 — so a single armchair, a 3-seater sofa, or a full dining chair set are each quoted individually rather than one flat 'living room' price.",
     benefits: [
       {
         icon: "Sofa",
@@ -259,12 +292,21 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes — sofa and upholstery cleaning is available for homes, offices, and Airbnb properties across Nakuru and Nakuru Town.",
       },
+      {
+        question: "Can you clean car seats and office chairs too?",
+        answer:
+          "Yes — the same extraction and conditioning methods used on sofas apply to car interiors, office seating, and event/hotel furniture, quoted per item just like home upholstery.",
+      },
     ],
     relatedServiceSlugs: ["carpet-cleaning", "mattress-cleaning", "house-cleaning"],
   },
 
   "post-construction-cleaning": {
     heroImage: "/images/gallery/patio-floor-scrubbing.jpeg",
+    openingHook:
+      "Builders leave behind more than an empty shell — cement dust in every corner, paint spatter on tile, a grout haze that won't mop away, and packaging everywhere. Move-in day (or handover day) shouldn't start with that mess still there.",
+    pricingNote:
+      "Post-construction cleaning is quoted per property based on size and how much debris/dust needs clearing before the detail pass — contracts typically start from KES 25,000 per visit for a standard house or unit. We'll confirm an exact figure after a quick walkthrough or set of photos.",
     benefits: [
       {
         icon: "HardHat",
@@ -321,12 +363,21 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes — we cover new developments and renovations across Nakuru, not just the town centre. Confirm your site location and we'll advise on timing.",
       },
+      {
+        question: "How many people and how long does a job like this take?",
+        answer:
+          "It depends on size, but a standard house or apartment usually takes a team of 3–4 cleaners a full day. Larger developments are scoped and quoted with a specific timeline before we start.",
+      },
     ],
     relatedServiceSlugs: ["office-cleaning", "pest-control", "house-cleaning"],
   },
 
   "mattress-cleaning": {
     heroImage: "/images/gallery/chair-upholstery-cleaning.jpeg",
+    openingHook:
+      "A mattress absorbs years of sweat, dust, and skin cells that no bedsheet can fully block — and it's exactly the kind of buildup that triggers allergies or just makes a room smell 'off' without anyone knowing why. Deep vacuuming and steam sanitization deals with what's actually inside it.",
+    pricingNote:
+      "Mattress cleaning is priced per item, from KES 1,800 — a single, double, or king-size mattress is each quoted individually based on size, so multi-bedroom homes get one clear combined price.",
     benefits: [
       {
         icon: "BedDouble",
@@ -381,15 +432,24 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Yes — mattress cleaning is available for homes, hostels, and short-stay properties across Nakuru and Nakuru Town.",
       },
+      {
+        question: "Can this help with dust mite allergies?",
+        answer:
+          "Deep vacuuming and steam treatment significantly reduce the dust mites and allergens living in a mattress, which many clients with allergies or asthma notice within the first few nights after a clean.",
+      },
     ],
     relatedServiceSlugs: ["sofa-cleaning", "carpet-cleaning", "house-cleaning"],
   },
 
   "pest-control": {
     heroImage: "/images/team/team-shopfront-2.jpeg",
+    openingHook:
+      "One bed bug bite or a cockroach sighting at night is usually all it takes to realize you have a real infestation, not just a one-off. Waiting rarely makes it better — bed bugs and cockroaches breed fast, and early treatment is always cheaper and faster than a delayed one.",
+    pricingNote:
+      "Pest control is quoted per visit based on the pest, the size of the space, and severity — treatments start from KES 3,500 per visit. Bed bug treatment includes a follow-up visit roughly two weeks later in the quoted price, since a single round rarely catches every egg.",
     benefits: [
       {
-        icon: "AlertCircle",
+        icon: "Bug",
         title: "Covers the common Nakuru pests",
         description:
           "Bed bugs, cockroaches, termites, ants, and rodents — treated with the right method for each, not one generic spray.",
@@ -446,6 +506,11 @@ const detailExtras: Record<string, DetailExtras> = {
         answer:
           "Usually not — most treatments only require a few hours away from the treated rooms while the product settles, not a full day or overnight stay.",
       },
+      {
+        question: "How quickly can you come out after I call?",
+        answer:
+          "Most fumigation jobs in and around Nakuru Town are scheduled within 24–48 hours of your call, sooner if the infestation is urgent (e.g. active bed bugs before guests arrive).",
+      },
     ],
     process: [
       {
@@ -483,6 +548,8 @@ export const serviceDetails: Record<string, ServiceDetail> = Object.fromEntries(
     const detail: ServiceDetail = {
       ...service,
       heroImage: extras.heroImage,
+      openingHook: extras.openingHook,
+      pricingNote: extras.pricingNote,
       benefits: extras.benefits,
       included: extras.included,
       notIncluded: extras.notIncluded,

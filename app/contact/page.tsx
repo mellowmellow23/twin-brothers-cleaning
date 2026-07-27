@@ -64,6 +64,9 @@ export default function ContactPage() {
               </a>
             </Button>
           </div>
+          <p className="text-center text-xs text-[var(--color-muted)] sm:text-left">
+            Alternative line: <a href="tel:+254718208407" className="font-medium hover:text-[var(--color-primary)]">0718 208 407</a>
+          </p>
 
           <div className="rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
             <div className="flex items-start gap-3">

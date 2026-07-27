@@ -35,6 +35,8 @@ export interface PriceRange {
 
 export interface ServiceDetail extends ServiceSummary {
   heroImage: string;
+  openingHook: string;
+  pricingNote: string;
   benefits: Benefit[];
   included: string[];
   notIncluded?: string[];

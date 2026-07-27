@@ -18,6 +18,7 @@ import { JsonLd } from "@/components/seo/json-ld";
 import { services, getServiceBySlug } from "@/lib/data/services";
 import { serviceDetails } from "@/lib/data/service-details";
 import { getTestimonialsForService } from "@/lib/data/testimonials";
+import { locations } from "@/lib/data/locations";
 import { formatPriceRange } from "@/lib/utils/format";
 import { createMetadata } from "@/lib/metadata";
 import {
@@ -42,11 +43,26 @@ export async function generateMetadata({
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) return {};
-  return createMetadata({
+
+  // Built directly (rather than via the site-wide "{title} | {site name}"
+  // template) because the full site name pushes long service names like
+  // "Post-Construction Cleaning" or "Pest Control & Fumigation" past the
+  // ~60-char limit search engines display in full. This short form always
+  // fits: longest current case is 50 chars.
+  const shortTitle = `${service.shortName} Nakuru | Twin Brothers`;
+
+  // Under 160 chars, always includes the starting price and a phone CTA.
+  const description = service.startingPrice
+    ? `${service.tagline}. ${formatPriceRange(service.startingPrice)}. Call 0723 358 456 for a free quote.`
+    : `${service.tagline}. Call 0723 358 456 for a free quote.`;
+
+  const base = createMetadata({
     title: service.name,
-    description: service.description,
+    description,
     path: service.href,
   });
+
+  return { ...base, title: { absolute: shortTitle } };
 }
 
 export default async function ServiceDetailPage({
@@ -99,10 +115,20 @@ export default async function ServiceDetailPage({
             {detail.tagline}
           </Badge>
           <h1 className="mt-5 text-4xl font-medium leading-[1.08] text-[var(--color-ink)] sm:text-5xl">
-            {detail.name}
+            {detail.name} in Nakuru
+            <span className="mt-2 block text-lg font-normal text-[var(--color-muted)] sm:text-xl">
+              by Twin Brothers Cleaning Service
+            </span>
           </h1>
           <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)]">
-            {detail.description}
+            {detail.openingHook}
+          </p>
+          <p className="mt-3 text-sm text-[var(--color-muted)]">
+            Serving{" "}
+            <Link href="/locations/nakuru" className="font-medium text-[var(--color-primary)] hover:underline">
+              Nakuru Town and the surrounding area
+            </Link>
+            .
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
             <Button asChild size="lg" variant="primary">
@@ -171,6 +197,47 @@ export default async function ServiceDetailPage({
             </p>
           </div>
         ) : null}
+      </section>
+
+      {/* Pricing */}
+      <section className="container-content">
+        <SectionHeading eyebrow="Transparent pricing" title="How much does it cost?" />
+        <div className="mt-8 flex flex-col gap-4 rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6 sm:flex-row sm:items-center sm:justify-between">
+          {detail.startingPrice ? (
+            <p className="font-[family-name:var(--font-mono)] text-2xl font-semibold text-[var(--color-primary-ink)]">
+              {formatPriceRange(detail.startingPrice)}
+            </p>
+          ) : null}
+          <p className="max-w-xl text-sm leading-relaxed text-[var(--color-muted)]">
+            {detail.pricingNote}
+          </p>
+        </div>
+      </section>
+
+      {/* Areas we serve */}
+      <section className="container-content">
+        <SectionHeading eyebrow="Coverage" title={`${detail.shortName} across Nakuru`} />
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[var(--color-muted)]">
+          Based on Moses Mudavadi Road, we cover Nakuru Town and the neighbourhoods around it,
+          including:
+        </p>
+        <ul className="mt-5 flex flex-wrap gap-3">
+          {locations[0]?.areasServed.map((area) => (
+            <li
+              key={area}
+              className="rounded-full border border-[var(--color-border)] bg-[var(--color-surface)] px-4 py-2 text-sm text-[var(--color-body)]"
+            >
+              {area}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-4 text-sm text-[var(--color-muted)]">
+          Don't see your area listed?{" "}
+          <Link href="/locations/nakuru" className="font-medium text-[var(--color-primary)] hover:underline">
+            See full coverage
+          </Link>{" "}
+          or just ask — we'll confirm.
+        </p>
       </section>
 
       {/* Process */}
