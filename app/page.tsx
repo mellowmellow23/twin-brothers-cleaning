@@ -13,14 +13,30 @@ import { services } from "@/lib/data/services";
 import { whyChooseUs, cleaningProcess, industriesServed, homeFaqs } from "@/lib/data/content";
 import { galleryImages } from "@/lib/data/gallery";
 import { createMetadata } from "@/lib/metadata";
-import { pageGraphSchema, webPageSchema, faqSchema } from "@/lib/schema";
+import { pageGraphSchema, webPageSchema, faqSchema, breadcrumbSchema } from "@/lib/schema";
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = createMetadata({
-  title: "Twin Brothers Cleaning Service | Nakuru",
+  title: "Twin Brothers Cleaning Service | Nakuru, Kenya",
   description:
-    "Professional house, office, carpet, sofa, mattress and post-construction cleaning in Nakuru, Kenya. Trained teams, professional equipment, and a satisfaction guarantee.",
+    "Professional house, office, carpet, sofa, mattress and post-construction cleaning in Nakuru, Kenya. Trained teams, professional equipment, and a satisfaction guarantee. Get a free quote today.",
   path: "/",
+  keywords: [
+    "cleaning service Nakuru",
+    "house cleaning Nakuru",
+    "office cleaning Kenya",
+    "carpet cleaning Nakuru",
+    "sofa cleaning Nakuru",
+    "mattress cleaning Nakuru",
+    "post construction cleaning Nakuru",
+    "deep cleaning Nakuru",
+    "professional cleaners Nakuru",
+    "move out cleaning Nakuru",
+    "upholstery cleaning Nakuru",
+    "residential cleaning Nakuru",
+    "commercial cleaning Nakuru",
+    "best cleaning company Nakuru",
+  ],
 });
 
 export default function HomePage() {
@@ -34,6 +50,7 @@ export default function HomePage() {
             description:
               "Professional house, office, carpet, sofa, mattress and post-construction cleaning in Nakuru, Kenya.",
           }),
+          breadcrumbSchema([{ label: "Home", href: "/" }]),
           faqSchema(homeFaqs),
         ])}
       />
@@ -51,6 +68,36 @@ export default function HomePage() {
           alt: "Twin Brothers team steam-cleaning a full set of sofas and dining chairs on site in Nakuru",
         }}
       />
+
+      {/* Service Area — keyword-rich text for local SEO */}
+      <section className="container-content">
+        <div className="mx-auto max-w-3xl text-center">
+          <p className="text-lg leading-relaxed text-muted-foreground">
+            Twin Brothers Cleaning Service operates throughout{" "}
+            <strong>Nakuru</strong> and surrounding areas including Lanet, Naivasha, Molo, and Njoro.
+            Whether you need{" "}
+            <Link href="/services/house-cleaning" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              house cleaning
+            </Link>,{" "}
+            <Link href="/services/office-cleaning" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              office cleaning
+            </Link>,{" "}
+            <Link href="/services/carpet-cleaning" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              carpet cleaning
+            </Link>,{" "}
+            <Link href="/services/sofa-cleaning" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              sofa cleaning
+            </Link>,{" "}
+            <Link href="/services/mattress-cleaning" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              mattress cleaning
+            </Link>, or{" "}
+            <Link href="/services/post-construction-cleaning" className="text-primary underline underline-offset-4 hover:text-primary/80">
+              post-construction cleaning
+            </Link>,
+            our trained teams arrive with professional equipment and get it done right the first time.
+          </p>
+        </div>
+      </section>
 
       {/* Problem section */}
       <section className="container-content">
@@ -112,7 +159,7 @@ export default function HomePage() {
       <section className="container-content">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <SectionHeading eyebrow="Recent work" title="See the Twin Brothers team at work" />
-          <Button asChild variant="outline">
+          <Button asChild variant="outline" aria-label="View full cleaning work gallery">
             <Link href="/gallery">View full gallery</Link>
           </Button>
         </div>

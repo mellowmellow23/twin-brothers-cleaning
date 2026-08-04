@@ -31,7 +31,9 @@ export function createMetadata({
   return {
     title: { absolute: fullTitle },
     description,
-    keywords,
+    keywords: keywords
+      ? [...(defaultMetadata.keywords ?? []), ...keywords]
+      : defaultMetadata.keywords,
     alternates: {
       canonical: url,
     },
@@ -53,6 +55,9 @@ export function createMetadata({
       description,
       images: [image],
     },
+    authors: [{ name: siteConfig.name, url: siteConfig.url }],
+    creator: siteConfig.name,
+    publisher: siteConfig.name,
   };
 }
 
@@ -71,7 +76,24 @@ export const defaultMetadata: Metadata = {
     "house cleaning Nakuru",
     "office cleaning Kenya",
     "carpet cleaning Nakuru",
+    "sofa cleaning Nakuru",
+    "mattress cleaning Nakuru",
+    "post construction cleaning Nakuru",
+    "deep cleaning Nakuru",
+    "window cleaning Nakuru",
+    "upholstery cleaning Nakuru",
+    "residential cleaning Nakuru",
+    "commercial cleaning Nakuru",
+    "move out cleaning Nakuru",
+    "spring cleaning Nakuru",
+    "professional cleaners Nakuru",
+    "cleaning company Nakuru",
+    "best cleaning service Nakuru",
+    "affordable cleaning Nakuru",
+    "same day cleaning Nakuru",
     "Twin Brothers Cleaning Service",
+    "Twin Brothers Cleaning Nakuru",
+    "cleaning and pest control Nakuru",
   ],
   authors: [{ name: siteConfig.name, url: siteConfig.url }],
   creator: siteConfig.name,
@@ -81,4 +103,19 @@ export const defaultMetadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   manifest: "/manifest.webmanifest",
+  verification: {
+    // TODO: Replace with your actual Google Search Console verification code
+    google: "google-site-verification=7AoEzdzz9_0Jzj8QASMVpdA1wmjMWjn0AHsA0A_OHcY",
+  },
+  formatDetection: {
+    telephone: true,
+    date: true,
+    address: true,
+    email: true,
+  },
+  appleWebApp: {
+    capable: true,
+    title: siteConfig.shortName,
+    statusBarStyle: "black-translucent",
+  },
 };

@@ -74,5 +74,73 @@ export function localBusinessSchema() {
     },
     sameAs: [googleBusinessProfile.mapsUrl],
     parentOrganization: { "@id": `${siteConfig.url}/#organization` },
+    // NEW: Explicit service types — critical for Google to classify you as a cleaning service
+    serviceType: [
+      "House Cleaning",
+      "Office Cleaning",
+      "Carpet Cleaning",
+      "Sofa Cleaning",
+      "Upholstery Cleaning",
+      "Mattress Cleaning",
+      "Post-Construction Cleaning",
+      "Deep Cleaning",
+      "Window Cleaning",
+      "Move-Out Cleaning",
+      "Pest Control",
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Cleaning Services",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "House Cleaning",
+            description: "Regular or one-off residential cleaning with vetted, uniformed teams.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Office Cleaning",
+            description: "Scheduled commercial cleaning for offices, banks and retail spaces.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Carpet Cleaning",
+            description: "Hot water extraction and shampoo treatments for carpets and rugs.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Sofa & Upholstery Cleaning",
+            description: "Fabric-safe shampooing and leather conditioning for furniture.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Mattress Cleaning",
+            description: "Deep vacuuming, steam sanitization and stain treatment for mattresses.",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Post-Construction Cleaning",
+            description: "Full debris removal and detail cleaning after renovation or new-build.",
+          },
+        },
+      ],
+    },
   };
 }
