@@ -5,7 +5,7 @@ import { notFound } from "next/navigation";
 import { CheckCircle2, XCircle } from "lucide-react";
 import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { SectionHeading } from "@/components/sections/section-heading";
-import { FeatureGrid } from "@/components/sections/feature-grid";
+import { FeatureGrid, FeatureGridItem } from "@/components/sections/feature-grid";
 import { Timeline } from "@/components/sections/timeline";
 import { FAQAccordion } from "@/components/sections/faq-accordion";
 import { CTABanner } from "@/components/sections/cta-banner";
