@@ -25,6 +25,7 @@ export interface ServiceSummary {
   icon: LucideIconName;
   startingPrice?: PriceRange;
   href: string;
+  keywords?: string[];
 }
 
 export interface PriceRange {
