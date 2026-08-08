@@ -14,7 +14,7 @@ import { pageGraphSchema, webPageSchema } from "@/lib/schema";
 export const metadata: Metadata = createMetadata({
   title: "Professional Cleaning Services in Nakuru",
   description:
-    "Professional residential and commercial cleaning services in Nakuru including house cleaning, office cleaning, sofa cleaning, carpet cleaning, mattress cleaning, post-construction cleaning and pest control.",
+    "Professional residential and commercial cleaning services in Nakuru including house cleaning, office cleaning, sofa cleaning, carpet cleaning, mattress cleaning and post-construction cleaning.",
   path: "/services",
 });
 

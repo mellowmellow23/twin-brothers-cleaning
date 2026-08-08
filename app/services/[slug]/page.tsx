@@ -114,16 +114,16 @@ export default async function ServiceDetailPage({
           <Badge variant="primary" icon={<Icon name={detail.icon} className="size-3.5" />}>
             {detail.tagline}
           </Badge>
-          <h1 className="mt-5 text-4xl font-medium leading-[1.08] text-[var(--color-ink)] sm:text-5xl">
+          <h1 className="mt-5 text-4xl font-medium leading-[1.08] text-(--color-ink) sm:text-5xl">
             {detail.name} in Nakuru
-            <span className="mt-2 block text-lg font-normal text-[var(--color-muted)] sm:text-xl">
+            <span className="mt-2 block text-lg font-normal text-(--color-muted) sm:text-xl">
               by Twin Brothers Cleaning Service
             </span>
           </h1>
-          <p className="mt-5 max-w-xl text-lg leading-relaxed text-[var(--color-muted)]">
+          <p className="mt-5 max-w-xl text-lg leading-relaxed text-(--color-muted)">
             {detail.openingHook}
           </p>
-          <p className="mt-3 text-sm text-[var(--color-muted)]">
+          <p className="mt-3 text-sm text-(--color-muted)">
             Serving{" "}
             <Link href="/locations/nakuru" className="font-medium text-[var(--color-primary)] hover:underline">
               Nakuru Town and the surrounding area
@@ -185,14 +185,14 @@ export default async function ServiceDetailPage({
               {detail.notIncluded.map((item) => (
                 <li
                   key={item}
-                  className="flex items-start gap-2.5 text-sm text-[var(--color-muted)]"
+                  className="flex items-start gap-2.5 text-sm text-(--color-muted)"
                 >
-                  <XCircle className="mt-0.5 size-4 shrink-0 text-[var(--color-muted)]" aria-hidden="true" />
+                  <XCircle className="mt-0.5 size-4 shrink-0 text-(--color-muted)" aria-hidden="true" />
                   {item}
                 </li>
               ))}
             </ul>
-            <p className="mt-4 text-xs text-[var(--color-muted)]">
+            <p className="mt-4 text-xs text-(--color-muted)">
               Need one of these? Ask us — we can often arrange it or refer a trusted partner.
             </p>
           </div>
@@ -208,7 +208,7 @@ export default async function ServiceDetailPage({
               {formatPriceRange(detail.startingPrice)}
             </p>
           ) : null}
-          <p className="max-w-xl text-sm leading-relaxed text-[var(--color-muted)]">
+          <p className="max-w-xl text-sm leading-relaxed text-(--color-muted)">
             {detail.pricingNote}
           </p>
         </div>
@@ -217,7 +217,7 @@ export default async function ServiceDetailPage({
       {/* Areas we serve */}
       <section className="container-content">
         <SectionHeading eyebrow="Coverage" title={`${detail.shortName} across Nakuru`} />
-        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-[var(--color-muted)]">
+        <p className="mt-4 max-w-2xl text-sm leading-relaxed text-(--color-muted)">
           Based on Moses Mudavadi Road, we cover Nakuru Town and the neighbourhoods around it,
           including:
         </p>
@@ -231,7 +231,7 @@ export default async function ServiceDetailPage({
             </li>
           ))}
         </ul>
-        <p className="mt-4 text-sm text-[var(--color-muted)]">
+        <p className="mt-4 text-sm text-(--color-muted)">
           Don't see your area listed?{" "}
           <Link href="/locations/nakuru" className="font-medium text-[var(--color-primary)] hover:underline">
             See full coverage
