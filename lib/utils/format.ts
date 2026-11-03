@@ -13,6 +13,8 @@ export function formatPriceRange(price: PriceRange): string {
     room: "per room",
     sqft: "per sq. ft",
     item: "per item",
+    sqm: "per sq. m",
+    seat: "per seat",
   };
   return `From ${amount} ${unitLabel[price.unit]}`;
 }

@@ -9,7 +9,7 @@ export const services: ServiceSummary[] = [
     description:
       "Regular or one-off residential cleaning with vetted, uniformed teams and a room-by-room checklist.",
     icon: "Home",
-    startingPrice: { currency: "KES", from: 2500, unit: "visit" },
+    startingPrice: { currency: "KES", from: 6000, unit: "visit" },
     href: "/services/house-cleaning",
     keywords: [
       "house cleaning Nakuru",
@@ -34,7 +34,7 @@ export const services: ServiceSummary[] = [
     description:
       "Scheduled commercial cleaning for offices, banks and retail spaces, with after-hours options.",
     icon: "Building2",
-    startingPrice: { currency: "KES", from: 15000, unit: "visit" },
+    startingPrice: { currency: "KES", from: 6000, unit: "visit" },
     href: "/services/office-cleaning",
     keywords: [
       "office cleaning Nakuru",
@@ -84,7 +84,7 @@ export const services: ServiceSummary[] = [
     description:
       "Fabric-safe shampooing and leather conditioning for sofas, dining chairs and office seating.",
     icon: "Sofa",
-    startingPrice: { currency: "KES", from: 1200, unit: "item" },
+    startingPrice: { currency: "KES", from: 650, unit: "seat" },
     href: "/services/sofa-cleaning",
     keywords: [
       "sofa cleaning Nakuru",
@@ -109,7 +109,7 @@ export const services: ServiceSummary[] = [
     description:
       "Full debris removal, dust extraction and detail cleaning after renovation or new-build handover.",
     icon: "HardHat",
-    startingPrice: { currency: "KES", from: 25000, unit: "visit" },
+    startingPrice: { currency: "KES", from: 8000, unit: "visit" },
     href: "/services/post-construction-cleaning",
     keywords: [
       "post construction cleaning Nakuru",
@@ -133,7 +133,7 @@ export const services: ServiceSummary[] = [
     description:
       "Deep vacuuming, steam sanitization and stain treatment to remove dust mites, sweat and odor.",
     icon: "BedDouble",
-    startingPrice: { currency: "KES", from: 1800, unit: "item" },
+    startingPrice: { currency: "KES", from: 1500, unit: "item" },
     href: "/services/mattress-cleaning",
     keywords: [
       "mattress cleaning Nakuru",
@@ -157,7 +157,7 @@ export const services: ServiceSummary[] = [
     description:
       "Targeted fumigation and pest treatment for bed bugs, cockroaches, termites, ants and rodents, with a free bed bug follow-up visit.",
     icon: "Bug",
-    startingPrice: { currency: "KES", from: 3500, unit: "visit" },
+    startingPrice: { currency: "KES", from: 4500, unit: "visit" },
     href: "/services/pest-control",
     keywords: [
       "pest control Nakuru",
@@ -171,6 +171,49 @@ export const services: ServiceSummary[] = [
       "bed bug fumigation Nakuru",
       "ant control Nakuru",
       "pest exterminator Nakuru",
+    ],
+  },
+  {
+    slug: "airbnb-management",
+    name: "Airbnb Cleaning & Management",
+    shortName: "Airbnb Management",
+    tagline: "Guest-ready turnovers and hands-off hosting",
+    description:
+      "Fast turnover cleaning between guests, linen and laundry, and an optional full management plan for short-stay hosts in Nakuru.",
+    icon: "Building",
+    startingPrice: { currency: "KES", from: 1500, unit: "visit" },
+    href: "/services/airbnb-management",
+    keywords: [
+      "airbnb cleaning Nakuru",
+      "airbnb management Nakuru",
+      "airbnb turnover cleaning Nakuru",
+      "short stay cleaning Nakuru",
+      "vacation rental cleaning Nakuru",
+      "airbnb host services Nakuru",
+      "serviced apartment cleaning Nakuru",
+      "airbnb property management Kenya",
+      "linen and laundry Nakuru",
+    ],
+  },
+  {
+    slug: "restaurant-cleaning",
+    name: "Restaurant & Commercial Kitchen Cleaning",
+    shortName: "Restaurant Cleaning",
+    tagline: "Hygienic kitchens and dining areas, inspection-ready",
+    description:
+      "Kitchen deep cleaning and scheduled cleaning for restaurants, cafes, hotels and shops, with optional pest control bundles.",
+    icon: "SprayCan",
+    startingPrice: { currency: "KES", from: 6000, unit: "visit" },
+    href: "/services/restaurant-cleaning",
+    keywords: [
+      "restaurant cleaning Nakuru",
+      "commercial kitchen cleaning Nakuru",
+      "kitchen deep cleaning Nakuru",
+      "hotel cleaning Nakuru",
+      "cafe cleaning Nakuru",
+      "shop cleaning Nakuru",
+      "food premises cleaning Nakuru",
+      "hotel kitchen cleaning Kenya",
     ],
   },
 ];

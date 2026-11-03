@@ -48,7 +48,7 @@ export function localBusinessSchema() {
     image: `${siteConfig.url}/og/default.jpg`,
     url: siteConfig.url,
     telephone: phone,
-    priceRange: "KES 1,200 – KES 100,000",
+    priceRange: "KES 650 – KES 100,000",
     address: {
       "@type": "PostalAddress",
       streetAddress: address,

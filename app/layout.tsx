@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/navigation/footer";
+import { MobileActionBar } from "@/components/navigation/mobile-action-bar";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteGraphSchema } from "@/lib/schema";
 import { defaultMetadata } from "@/lib/metadata";
@@ -32,7 +33,7 @@ export const metadata: Metadata = defaultMetadata;
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en-KE" className={`${fraunces.variable} ${inter.variable} ${plexMono.variable}`}>
-      <body>
+      <body className="pb-20 md:pb-0">
         <a href="#main-content" className="skip-link">
           Skip to content
         </a>
@@ -42,6 +43,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           {children}
         </main>
         <Footer />
+        <MobileActionBar />
       </body>
     </html>
   );

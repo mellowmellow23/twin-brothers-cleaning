@@ -31,7 +31,7 @@ export interface ServiceSummary {
 export interface PriceRange {
   currency: "KES";
   from: number;
-  unit: "visit" | "room" | "sqft" | "item";
+  unit: "visit" | "room" | "sqft" | "sqm" | "seat" | "item";
 }
 
 export interface ServiceDetail extends ServiceSummary {
