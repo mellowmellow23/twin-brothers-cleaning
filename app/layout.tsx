@@ -3,6 +3,7 @@ import { Fraunces, Inter, IBM_Plex_Mono } from "next/font/google";
 import { Navbar } from "@/components/navigation/navbar";
 import { Footer } from "@/components/navigation/footer";
 import { MobileActionBar } from "@/components/navigation/mobile-action-bar";
+import { WhatsAppFloat } from "@/components/navigation/whatsapp-float";
 import { JsonLd } from "@/components/seo/json-ld";
 import { siteGraphSchema } from "@/lib/schema";
 import { defaultMetadata } from "@/lib/metadata";
@@ -44,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </main>
         <Footer />
         <MobileActionBar />
+        <WhatsAppFloat />
       </body>
     </html>
   );

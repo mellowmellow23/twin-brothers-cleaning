@@ -4,6 +4,7 @@ import { Breadcrumbs } from "@/components/seo/breadcrumbs";
 import { SectionHeading } from "@/components/sections/section-heading";
 import { ContactForm } from "@/components/forms/contact-form";
 import { Button } from "@/components/ui/button";
+import { SocialLinks } from "@/components/ui/social-links";
 import { JsonLd } from "@/components/seo/json-ld";
 import { contactChannels, businessHours, googleBusinessProfile } from "@/lib/data/site";
 import { createMetadata } from "@/lib/metadata";
@@ -67,6 +68,11 @@ export default function ContactPage() {
           <p className="text-center text-xs text-[var(--color-muted)] sm:text-left">
             Alternative line: <a href="tel:+254718208407" className="font-medium hover:text-[var(--color-primary)]">0718 208 407</a>
           </p>
+
+          <div>
+            <p className="mb-3 text-sm font-semibold text-[var(--color-ink)]">Follow us</p>
+            <SocialLinks tone="light" />
+          </div>
 
           <div className="rounded-[var(--radius-md)] border border-[var(--color-border)] bg-[var(--color-surface)] p-6">
             <div className="flex items-start gap-3">

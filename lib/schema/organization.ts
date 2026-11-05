@@ -1,4 +1,4 @@
-import { siteConfig, contactChannels, businessHours, googleBusinessProfile } from "@/lib/data/site";
+import { siteConfig, contactChannels, businessHours, googleBusinessProfile, socialLinks } from "@/lib/data/site";
 
 const phone = contactChannels.find((c) => c.type === "phone")?.value;
 const address = contactChannels.find((c) => c.type === "address")?.value;
@@ -14,8 +14,7 @@ export function organizationSchema() {
     logo: `${siteConfig.url}/images/brand/logo-wordmark.png`,
     telephone: phone,
     sameAs: [
-      "https://facebook.com/twinbrotherscleaning",
-      "https://instagram.com/twinbrotherscleaning",
+      ...socialLinks.map((link) => link.href),
       googleBusinessProfile.mapsUrl,
     ],
   };

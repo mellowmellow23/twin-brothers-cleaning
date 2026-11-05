@@ -3,7 +3,7 @@
  * Edit the numbers here. Keep them in step with the service pages
  * (lib/data/service-details.ts) and the "From" prices (lib/data/services.ts).
  */
-export const whatsappNumber = "254723358456";
+export const whatsappNumber = "254718208407";
 
 export interface PriceRow {
   label: string;

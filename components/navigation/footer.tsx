@@ -1,16 +1,10 @@
 import Link from "next/link";
-import { Facebook, Instagram, MessageCircle, Star, Twitter } from "lucide-react";
+import { Star } from "lucide-react";
+import { SocialLinks } from "@/components/ui/social-links";
 import { Logo } from "./logo";
 import { footerNav } from "@/lib/data/navigation";
-import { contactChannels, businessHours, siteConfig, socialLinks, googleBusinessProfile } from "@/lib/data/site";
+import { contactChannels, businessHours, siteConfig, googleBusinessProfile } from "@/lib/data/site";
 import { Icon } from "@/lib/utils/icons";
-
-const socialIcons: Record<string, React.ComponentType<{ className?: string }>> = {
-  Facebook,
-  Instagram,
-  TikTok: MessageCircle,
-  X: Twitter,
-};
 
 export function Footer() {
   const year = new Date().getFullYear();
@@ -25,24 +19,7 @@ export function Footer() {
             <p className="mt-5 max-w-xs text-sm leading-relaxed text-white/60">
               {siteConfig.description}
             </p>
-            <ul className="mt-6 flex gap-3">
-              {socialLinks.map((social) => {
-                const SocialIcon = socialIcons[social.label] ?? Facebook;
-                return (
-                  <li key={social.label}>
-                    <a
-                      href={social.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={social.label}
-                      className="flex size-9 items-center justify-center rounded-full border border-white/15 hover:border-[var(--color-accent)] hover:text-[var(--color-accent)]"
-                    >
-                      <SocialIcon className="size-4" aria-hidden="true" />
-                    </a>
-                  </li>
-                );
-              })}
-            </ul>
+            <SocialLinks tone="dark" className="mt-6" />
 
             <a
               href={googleBusinessProfile.mapsUrl}

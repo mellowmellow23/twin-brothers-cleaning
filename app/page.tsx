@@ -16,9 +16,9 @@ import { pageGraphSchema, webPageSchema, faqSchema, breadcrumbSchema } from "@/l
 import { Button } from "@/components/ui/button";
 
 export const metadata: Metadata = createMetadata({
-  title: "Twin Brothers Cleaning Service | Nakuru, Kenya",
+  title: "Twin Brothers Cleaning Service | Nakuru - Fumigation, Sofa & Carpet Cleaning",
   description:
-    "Cleaning and fumigation in Nakuru with clear prices: house cleaning from KES 6,000, fumigation from KES 4,500. Call or WhatsApp 0723 358 456.",
+    "Fumigation, sofa & carpet cleaning in Nakuru, plus house, office, Airbnb and restaurant cleaning. Clear prices. Call 0723 358 456 or WhatsApp 0718 208 407.",
   path: "/",
   keywords: [
     "cleaning service Nakuru",

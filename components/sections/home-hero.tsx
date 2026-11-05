@@ -15,11 +15,10 @@ export function HomeHero() {
           Moses Mudavadi Road, Nakuru
         </Badge>
         <h1 className="mt-5 max-w-3xl text-4xl font-medium leading-[1.08] text-[var(--color-ink)] sm:text-5xl lg:text-6xl">
-          Cleaning and fumigation in Nakuru, with clear prices.
+          Walk into a spotless space.
         </h1>
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[var(--color-muted)]">
-          Trained, uniformed teams for homes, offices, Airbnbs and restaurants. See our prices
-          below, then call or WhatsApp to book.
+          Trained, uniformed teams for homes, offices, Airbnbs and restaurants across Nakuru — see our prices below, then call or WhatsApp to book.
         </p>
 
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">

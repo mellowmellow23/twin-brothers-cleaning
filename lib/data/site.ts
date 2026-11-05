@@ -39,8 +39,8 @@ export const contactChannels: ContactChannel[] = [
   {
     type: "whatsapp",
     label: "WhatsApp",
-    value: "0723 358 456",
-    href: "https://wa.me/254723358456",
+    value: "0718 208 407",
+    href: "https://wa.me/254718208407",
   },
   {
     type: "email",
@@ -64,7 +64,4 @@ export const businessHours: BusinessHours[] = [
   { day: "Sunday", hours: "Closed" },
 ];
 
-export const socialLinks = [
-  { label: "Facebook", href: "https://facebook.com/twinbrotherscleaning" },
-  { label: "Instagram", href: "https://instagram.com/twinbrotherscleaning" },
-] as const;
+export { socialLinks } from "./social";
