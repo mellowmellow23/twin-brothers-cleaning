@@ -49,8 +49,21 @@ export const priceList: Record<string, PriceListEntry> = {
     ],
   },
   "carpet-cleaning": {
-    note: "Steam and shampoo cleaning",
-    rows: [{ label: "Per square foot", price: "KES 350" }],
+    note: "Steam and shampoo cleaning, priced by carpet size",
+    rows: [
+      { label: "3 x 5 ft", price: "KES 800" },
+      { label: "4 x 6 ft", price: "KES 1,000" },
+      { label: "5 x 6 ft", price: "KES 1,500" },
+      { label: "5 x 8 ft", price: "KES 2,000" },
+      { label: "6 x 8 ft", price: "KES 2,500" },
+      { label: "6 x 9 ft", price: "KES 2,700" },
+      { label: "7 x 10 ft", price: "KES 3,500" },
+      { label: "8 x 10 ft", price: "KES 4,000" },
+      { label: "9 x 12 ft", price: "KES 5,500" },
+      { label: "10 x 14 ft", price: "KES 7,000" },
+      { label: "12 x 15 ft", price: "KES 9,000" },
+      { label: "Wall-to-wall / larger", price: "About KES 50 per sq. ft" },
+    ],
   },
   "sofa-cleaning": {
     note: "Sofa sets and upholstery",
@@ -67,18 +80,18 @@ export const priceList: Record<string, PriceListEntry> = {
   "airbnb-management": {
     note: "Turnover cleaning per booking",
     rows: [
-      { label: "Studio / bedsitter", price: "KES 1,500" },
-      { label: "1 Bedroom", price: "KES 2,000" },
-      { label: "2 Bedroom", price: "KES 2,800" },
-      { label: "3 Bedroom", price: "KES 3,800" },
+      { label: "Studio / bedsitter", price: "KES 2,500" },
+      { label: "1 Bedroom", price: "KES 3,500" },
+      { label: "2 Bedroom", price: "KES 4,500" },
+      { label: "3 Bedroom", price: "KES 6,000" },
     ],
   },
   "restaurant-cleaning": {
     note: "Kitchens, cafes, hotels and shops",
     rows: [
-      { label: "Cafe / small kitchen", price: "From KES 6,000" },
-      { label: "Restaurant kitchen", price: "From KES 10,000" },
-      { label: "Monthly contract", price: "From KES 20,000" },
+      { label: "Small kitchen", price: "KES 10,000" },
+      { label: "Restaurant kitchen", price: "KES 15,000" },
+      { label: "Monthly contract", price: "Contact us" },
     ],
   },
   "post-construction-cleaning": {

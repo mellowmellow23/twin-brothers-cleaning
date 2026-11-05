@@ -59,7 +59,7 @@ export const services: ServiceSummary[] = [
     description:
       "Hot water extraction and shampoo treatments that remove embedded dirt, odors and allergens.",
     icon: "Layers",
-    startingPrice: { currency: "KES", from: 350, unit: "sqft" },
+    startingPrice: { currency: "KES", from: 800, unit: "item" },
     href: "/services/carpet-cleaning",
     keywords: [
       "carpet cleaning Nakuru",
@@ -181,7 +181,7 @@ export const services: ServiceSummary[] = [
     description:
       "Fast turnover cleaning between guests, linen and laundry, and an optional full management plan for short-stay hosts in Nakuru.",
     icon: "Building",
-    startingPrice: { currency: "KES", from: 1500, unit: "visit" },
+    startingPrice: { currency: "KES", from: 2500, unit: "visit" },
     href: "/services/airbnb-management",
     keywords: [
       "airbnb cleaning Nakuru",
@@ -203,7 +203,7 @@ export const services: ServiceSummary[] = [
     description:
       "Kitchen deep cleaning and scheduled cleaning for restaurants, cafes, hotels and shops, with optional pest control bundles.",
     icon: "SprayCan",
-    startingPrice: { currency: "KES", from: 6000, unit: "visit" },
+    startingPrice: { currency: "KES", from: 10000, unit: "visit" },
     href: "/services/restaurant-cleaning",
     keywords: [
       "restaurant cleaning Nakuru",

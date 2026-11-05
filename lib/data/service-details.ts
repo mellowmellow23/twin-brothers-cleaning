@@ -165,7 +165,7 @@ const detailExtras: Record<string, DetailExtras> = {
     openingHook:
       "Old coffee stains, a musty smell after the rains, or carpets that just look flat and grey no matter how often they're vacuumed — regular vacuuming only ever lifts surface dust. The dirt and odor sitting deep in the fibres needs actual extraction.",
     pricingNote:
-      "Carpet cleaning is priced per square foot so you're only paying for the area actually cleaned, from KES 350 per sq. ft. A typical living room or bedroom carpet is quoted upfront once we know the room dimensions — no flat 'per room' guessing.",
+      "Carpet cleaning is priced by carpet size, in feet: KES 800 for a 3x5, KES 1,000 for a 4x6, KES 1,500 for a 5x6, KES 2,000 for a 5x8, KES 2,500 for a 6x8, KES 2,700 for a 6x9, KES 3,500 for a 7x10, KES 4,000 for an 8x10, KES 5,500 for a 9x12, KES 7,000 for a 10x14, KES 9,000 for a 12x15. Wall-to-wall and larger carpets are priced at about KES 50 per sq. ft once we know the dimensions.",
     benefits: [
       {
         icon: "Droplets",
@@ -208,9 +208,9 @@ const detailExtras: Record<string, DetailExtras> = {
           "Typically 3–6 hours depending on carpet thickness, ventilation, and humidity. We can advise faster-drying options if timing is tight.",
       },
       {
-        question: "Do you charge per room or per square foot?",
+        question: "How is carpet cleaning priced?",
         answer:
-          "Carpet cleaning is priced per square foot so the quote reflects the exact area, not a flat per-room estimate.",
+          "Carpet cleaning is priced by carpet size. A 4x6 is KES 1,000, a 5x6 is KES 1,500 and a 9x12 is KES 5,500. Wall-to-wall and very large carpets are priced at about KES 50 per sq. ft.",
       },
       {
         question: "Can you remove old, set-in stains?",
@@ -546,7 +546,7 @@ const detailExtras: Record<string, DetailExtras> = {
     openingHook:
       "Between a 10am check-out and a 2pm check-in, your unit has to go from lived-in to hotel-ready, and one missed hair or a creased bed can cost you a review. A consistent crew that knows your unit's checklist takes that off your plate, whether you want just the cleaning or the whole listing looked after.",
     pricingNote:
-      "Turnover cleaning is priced per booking by unit size: from KES 1,500 for a studio or bedsitter, KES 2,000 for a 1-bedroom, KES 2,800 for a 2-bedroom and KES 3,800 for a 3-bedroom. Linen and laundry is KES 600 per set, and a deep clean is about 1.5 times the turnover rate. Full management is 15% of booking revenue, with cleaning billed separately at the rates above so you can see exactly what you pay.",
+      "Turnover cleaning is priced per booking by unit size: KES 2,500 for a studio or bedsitter, KES 3,500 for a 1-bedroom, KES 4,500 for a 2-bedroom and KES 6,000 for a 3-bedroom. Larger units are quoted on request. Linen and laundry is KES 600 per set, and a deep clean is about 1.5 times the turnover rate. Full management is 15% of booking revenue, with cleaning billed separately at the rates above so you can see exactly what you pay.",
     benefits: [
       {
         icon: "Timer",
@@ -590,7 +590,7 @@ const detailExtras: Record<string, DetailExtras> = {
       {
         question: "How much does Airbnb turnover cleaning cost?",
         answer:
-          "It depends on unit size: from KES 1,500 for a studio or bedsitter, KES 2,000 for a 1-bedroom, KES 2,800 for a 2-bedroom and KES 3,800 for a 3-bedroom. Deep cleans are about 1.5 times that rate.",
+          "It depends on unit size: KES 2,500 for a studio or bedsitter, KES 3,500 for a 1-bedroom, KES 4,500 for a 2-bedroom and KES 6,000 for a 3-bedroom. Deep cleans are about 1.5 times that rate.",
       },
       {
         question: "Do you handle linen and laundry?",
@@ -621,7 +621,7 @@ const detailExtras: Record<string, DetailExtras> = {
     openingHook:
       "A greasy cooker, grime behind the fridges and a dirty back-of-house don't just risk a failed inspection, they attract pests and put customers off. Twin Brothers deep-cleans kitchens and dining areas on a schedule that works around your service, and can pair it with fumigation.",
     pricingNote:
-      "Kitchen deep cleans start from KES 6,000 for a cafe or small kitchen and run KES 10,000–14,000 for a restaurant kitchen. Hotel and large kitchens start from KES 18,000 and are quoted after a site visit. Monthly contracts (scheduled cleaning plus a weekly deep clean) start from KES 20,000 per month, and shops and retail units from KES 4,000 per visit.",
+      "Kitchen deep cleans are KES 10,000 for a small kitchen and KES 15,000 for a restaurant kitchen. Hotel and large kitchens are quoted after a site visit. Monthly contracts (scheduled cleaning plus a weekly deep clean) are quoted to suit your premises, so contact us for a price. Shops and retail units start from KES 4,000 per visit.",
     benefits: [
       {
         icon: "Clock",
@@ -670,12 +670,12 @@ const detailExtras: Record<string, DetailExtras> = {
       {
         question: "How much does restaurant cleaning cost?",
         answer:
-          "A deep clean starts from KES 6,000 for a small kitchen and runs KES 10,000–14,000 for a typical restaurant kitchen. Hotel and large kitchens start from KES 18,000, quoted after a site visit.",
+          "A deep clean is KES 10,000 for a small kitchen and KES 15,000 for a restaurant kitchen. Hotel and large kitchens are quoted after a site visit.",
       },
       {
         question: "Do you offer monthly contracts?",
         answer:
-          "Yes. Scheduled cleaning with a weekly deep clean starts from KES 20,000 per month, depending on size and frequency.",
+          "Yes. Monthly contracts cover scheduled cleaning with a weekly deep clean. Contact us for a quote based on your size and how often you need us.",
       },
       {
         question: "Do you clean shops, hotels and offices too?",
